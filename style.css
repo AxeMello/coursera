@@ -1,7 +1,9 @@
-
 h1{
     text-align: center; 
     color: red;
+    background-color: grey;
+    font-size: 4em;
+    border: 0;
 }
 .big {
     size: 100px;
@@ -33,4 +35,29 @@ a:link, a:visited {
 a:hover, a:active{
     color: greenyellow;
     cursor: pointer;
+}
+.wiki{
+    width: 400px;
+    height: 200px;
+    overflow: auto;
+    background-color: grey;
+    border: 10px;
+    border: 10px;
+    margin-left: 900px;
+}
+
+body {
+    font-size: 24px;
+    color: white;
+}
+
+html {
+    background: url(https://i.ytimg.com/vi/dhT9LbCBZ5M/maxresdefault.jpg) black;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+* {
+    border: 0;
+    box-sizing: border-box;
 }
