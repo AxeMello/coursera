@@ -26,11 +26,9 @@ li:nth-child(even){
 }
 a:link, a:visited {
     text-decoration: none;
-    color: blue;
+    color: lime;
     border: 1px black;
     display: block;
-    width: 600px;
-    text-align: center;
 }
 a:hover, a:active{
     color: greenyellow;
@@ -38,19 +36,58 @@ a:hover, a:active{
 }
 .wiki{
     width: 400px;
-    height: 200px;
+    height: 450px;
     overflow: auto;
-    background-color: grey;
-    border: 10px;
-    border: 10px;
-    margin-left: 900px;
+    float: right;
+    clear: both;
+}
+div#cunt{
+    position: relative;
+}
+.p1{
+    background-color: red;
+    position: relative;
+    left: 600px;
+    width: 50px;
+    height: 50px;
+}   
+.p2{
+    background-color: red;
+    position: absolute;
+    left: 660px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+}
+.p3{
+    background-color: red;
+    position: absolute;
+    left: 720px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+}
+.p4 {
+    background-color: red;
+    position: relative;
+    left: 660px;
+    bottom: 15px;
+    width: 50px;
+    height: 50px;
 }
 
 body {
     font-size: 24px;
     color: white;
 }
-
+footer {
+    width: 170px;
+    height: 30px;
+    border: 10px;
+    color: limegreen;
+    margin: 10px;
+    text-align: center;
+}
 html {
     background: url(https://i.ytimg.com/vi/dhT9LbCBZ5M/maxresdefault.jpg) black;
     background-repeat: no-repeat;
