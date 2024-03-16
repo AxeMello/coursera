@@ -103,3 +103,10 @@ Circle.prototype.getArea =
 var myCircle = new Circle(10);
 console.log(myCircle.getArea());
 var myOtherCircle = new Circle(20); console.log(myOtherCircle);
+
+var arr = new Array();
+arr[0] = "Aksel";
+arr[1] = "Cruses";
+// can also use like arr = ["Aksel", "Cruses"]; and use sub arrays inside { name: { sd}}
+
+console.log(arr);
