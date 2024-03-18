@@ -110,3 +110,47 @@ arr[1] = "Cruses";
 // can also use like arr = ["Aksel", "Cruses"]; and use sub arrays inside { name: { sd}}
 
 console.log(arr);
+
+
+// browser
+
+console.log(document.getElementById("head"));
+
+
+document.addEventListener("DOMContentLoaded",
+    function(event) {
+        console.log(event);
+        // function clickbut() {
+//     var name = document.getElementById("name").value;
+//     var message = "Hello " + name;
+//     if (name === "axe") {
+//        // document.getElementById("send").textContent = message;
+//         // document.getElementById("wel").innerHTML = "<h2>" + message + "</h2>";
+//         var mi = document.querySelector("#mi").textContent;
+//         mi += "ultra!";
+//         document.getElementById("mi").textContent = mi;
+//     };
+
+    function testing (event) {
+        var name = document.getElementById("test").value;
+        var message = "Hello " + name;
+        if (name === "axe") {
+           // document.getElementById("send").textContent = message;
+            // document.getElementById("wel").innerHTML = "<h2>" + message + "</h2>";
+            var test = document.querySelector("#test").textContent;
+            test += "ultra!";
+            document.getElementById("tast").textContent = test;
+        };
+    };
+    
+    // document.querySelector('button').addEventListener("click", testing);
+    document.querySelector("button").onclick = testing;
+
+
+    document.querySelector("body").addEventListener("mousemove",
+    function (event) {
+        if (event.shiftKey === true) {
+            console.log("x: " + event.clientX + " & y: " + event.clientY);
+        }
+    })
+});
