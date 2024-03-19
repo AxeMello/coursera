@@ -145,7 +145,11 @@ document.addEventListener("DOMContentLoaded",
     
     // document.querySelector('button').addEventListener("click", testing);
     document.querySelector("button").onclick = testing;
-
+    $ajaxUtils.send("/data/name.txt")
+        function(request) {
+            document.querySelector("#body").innerHTML = "<h2>Hello" +  self.name + "!"
+        }
+    
 
     document.querySelector("body").addEventListener("mousemove",
     function (event) {
@@ -153,4 +157,7 @@ document.addEventListener("DOMContentLoaded",
             console.log("x: " + event.clientX + " & y: " + event.clientY);
         }
     })
+
+    //server
+
 });
