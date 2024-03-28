@@ -144,11 +144,11 @@ document.addEventListener("DOMContentLoaded",
     };
     
     // document.querySelector('button').addEventListener("click", testing);
-    document.querySelector("button").onclick = testing;
-    $ajaxUtils.send("/data/name.txt")
-        function(request) {
-            document.querySelector("#body").innerHTML = "<h2>Hello" +  self.name + "!"
-        }
+    // document.querySelector("button").onclick = testing;
+    // $ajaxUtils.send("/data/name.txt")
+    //     function(request) {
+    //         document.querySelector("#body").innerHTML = "<h2>Hello" +  self.name + "!"
+    //     }
     
 
     document.querySelector("body").addEventListener("mousemove",
@@ -159,5 +159,33 @@ document.addEventListener("DOMContentLoaded",
     })
 
     //server
+    (function (global) {
+        
+        var dc = {};
+         var snip = "mi14.html";
 
+         var insertHTML = function (selector, html) {
+            var targertElm = document.querySelector(selector);
+            targertElm.insertHTML = html;
+         };
+        
+         var showloading = function (selector) {
+            var html = "<div class = 'text-center'>";
+            html += "<img src= 'loading.gif'></div>";
+            insertHTML(selector,html);
+         };
+
+         document.addEventListener("DOMContentLoaded", function (event) {
+            showloading('#mi');
+            $ajaxUtils.sendGetRequest(
+                snip,
+                function (responseText) {
+                    document.querySelector('#mi').innerHTML = responseText;
+                },
+                false);
+         });
+
+         global.$dc = dc;
+
+        })
 });
